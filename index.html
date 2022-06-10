@@ -15,7 +15,7 @@
     -->
 
     <!-- SEO -->
-    <title>WebSlides Keynote: Make a Keynote presentation using HTML</title>
+    <title>微前端qiankun实践</title>
     <meta name="description" content="WebSlides is the easiest way to make HTML presentations. Just essential features, clean code, and lovely CSS.">
 
     <!-- URL CANONICAL -->
@@ -64,22 +64,10 @@
   <body>
     <header role="banner">
       <nav role="navigation">
-        <p class="logo"><a href="index.html" title="WebSlides">WebSlides</a></p>
         <ul>
-          <li class="github">
-            <a rel="external" href="https://github.com/webslides/webslides" title="Github">
-              <svg class="fa-github">
-                <use xlink:href="#fa-github"></use>
-              </svg>
-              <em>WebSlides</em>
-            </a>
-          </li>
           <li class="twitter">
-            <a rel="external" href="https://twitter.com/webslides" title="Twitter">
-              <svg class="fa-twitter">
-                <use xlink:href="#fa-twitter"></use>
-              </svg>
-              <em>@WebSlides</em>
+            <a rel="external" href="#">
+              导出
             </a>
           </li>
           <!--  <li class="dribbble"><a rel="external" href="http://dribbble.com/webslides" title="Dribbble"><svg class="fa-dribbble"><use xlink:href="#fa-dribbble"></use></svg> <em>webslides</em></a></li> -->
@@ -99,23 +87,47 @@
         <section class="bg-apple aligncenter">
           <!--.wrap = container (width: 90%) -->
           <div class="wrap">
-            <h1><img class="whitelogo" src="static/images/logos/apple.svg" alt="Apple Logo"></h1>
+            <!-- <h1><img class="whitelogo" src="static/images/logos/apple.svg" alt="Apple Logo"></h1> -->
+            <h1>微前端qiankun实践</h1>
+            <p style="text-align: right;
+            width: 28%;
+            margin: 50px auto 0;">分享人：漆林杰</p>
+            <p style="text-align: right;
+            width: 28%;
+            margin: 10px auto 0;">武汉前端客服团队</p>
           </div>
           <!-- .end .wrap -->
         </section>
         <section class="bg-apple">
           <!--.wrap = container (width: 90%) -->
           <div class="wrap size-50">
-            <h1>Make a Keynote presentation using HTML</h1>
-            <p class="text-intro">WebSlides is an open source framework for building HTML presentations, landings, and portfolios.</p>
-            <p><code>.bg-apple</code></p>
+            <h2>分享主要内容</h2>
+            <ul>
+              <li><a href="#slide=40">微前端是什么</a></li>
+              <li><a href="#slide=40">分享背景</a></li>
+              <li><a href="#slide=40">微前端不同实现方式</a></li>
+              <li>
+                <a href="#slide=40">微前端各方式差异</a>
+                <ol>
+                  <li><a href="#slide=40">iframe</a></li>
+                  <li><a href="#slide=40">nginx</a></li>
+                  <li><a href="#slide=40">qiankun</a></li>
+                </ol>
+              </li>
+              <li><a href="#slide=40">参考文献</a></li>
+              <li><a href="#slide=40">demo地址</a></li>
+            </ul>
           </div>
           <!-- .end .wrap -->
         </section>
         <section class="bg-apple aligncenter">
           <!--.wrap = container (width: 90%) -->
           <div class="wrap">
-            <h2>HTML presentations can be easy</h2>
+            <h2>微前端是什么？</h2>
+            <p>微前端就是与多个可以独立发布功能的团队一起构建现代化web应用程序的技术、策略和方法，将大而可怕的事物分割成更小、更易于管理的部分，
+              然后明确它们之间的依赖关系。我们的技术选择，我们的代码库，我们的团队，以及我们的发布过程都应该能够相互独立地操作和进化，而不需要过度的协调。
+              微前端架构是一种类似于微服务的架构，它将微服务的理念应用于浏览器端，即将 Web 应用由单一的单体应用转变为多个小型前端应用聚合为一的应用
+             </p>
           </div>
           <!-- .end .wrap -->
         </section>
@@ -810,34 +822,26 @@
           </div>
           <!-- .end .wrap -->
         </section>
-        <section class="bg-apple aligncenter">
+        <section class="bg-apple">
           <!-- .wrap = container (width: 90%) -->
-          <div class="wrap">
-            <h2><strong>Start in seconds</strong></h2>
-            <p class="text-intro">120+ prebuilt slides ready to use.</p>
-            <p>
-              <a href="https://webslides.tv/webslides-latest.zip" class="button" title="Download WebSlides">
-                <svg class="fa-cloud-download">
-                  <use xlink:href="#fa-cloud-download"></use>
-                </svg>
-                Free Download
-              </a>
-              <span class="try">
-                <a href="https://www.paypal.me/jlantunez/8" title="Good karma :)">
-                  <svg class="fa-paypal">
-                    <use xlink:href="#fa-paypal"></use>
-                  </svg>
-                  Pay what you want.
-                </a>
-              </span>
-            </p>
+          <div class="wrap size-50">
+            <h2>参考文献</h2>
+            <ul>
+              <li><a href="https://microfrontends.com">https://microfrontends.com</a></li>
+              <li><a href="https://juejin.cn/post/6875462470593904653#heading-18">https://juejin.cn/post/6875462470593904653#heading-18</a></li>
+              <li><a href="https://blog.csdn.net/qq_42783654/article/details/116042226">https://blog.csdn.net/qq_42783654/article/details/116042226</a></li>
+              <li><a href=""></a></li>
+              <li><a href=""></a></li>
+              <li><a href=""></a></li>
+              <li><a href=""></a></li>
+              <li><a href=""></a></li>
+            </ul>
           </div>
           <!-- .end .wrap -->
         </section>
         <section class="bg-apple aligncenter">
           <h2 class="text-emoji zoomIn">😎</h2>
           <h3><strong>Thank you!</strong></h2>
-          <p><a href="https://twitter.com/webslides" title="@WebSlides on Twitter">@WebSlides</a></p>
         </section>
 
       </article>

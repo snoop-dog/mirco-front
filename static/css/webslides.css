@@ -339,6 +339,17 @@ footer:after,
 .wrap:after {
   clear: both; }
 
+.wrap p {
+  width: 50%;
+  margin: 50px auto 0;
+  text-align: left;
+  text-indent: 2em;
+}
+
+.wrap * {
+  font-family: cursive;
+}
+
 /*=========================================
 1. Base --> Baseline: 8px = .8rem
 =========================================== */
@@ -794,7 +805,7 @@ body,
 input,
 select,
 textarea {
-  font-family: 'Roboto', 'San Francisco', helvetica, arial, sans-serif;
+  font-family: cursive, 'Roboto', 'San Francisco', helvetica, arial, sans-serif;
   font-size: 62.5%; }
 
 body,
@@ -819,7 +830,14 @@ p:last-child {
 
 ul > li,
 ol > li {
-  margin-left: 3.2rem; }
+  margin-left: 3.2rem; 
+  line-height: 5rem;
+}
+
+ul > li > a,
+ol > li > a {
+  color: #abd !important;
+}
 
 li li {
   font-size: 100%; }
