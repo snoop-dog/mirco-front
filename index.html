@@ -133,199 +133,90 @@
           </div>
           <!-- .end .wrap -->
         </section>
-        <section class="bg-apple">
+        <section class="bg-apple aligncenter">
           <div class="wrap">
-            <h2>Features</h2>
-            <ul class="flexblock features">
-              <li>
-                <div>
-                  <h2>
-                    <span>&rarr;</span>
-                    Simple Navigation
-                  </h2>
-                  with arrow keys and swipe.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <svg class="fa-link">
-                      <use xlink:href="#fa-link"></use>
-                    </svg>
-                    Permalinks
-                  </h2>
-                  Go to a specific slide.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <svg class="fa-clock-o">
-                      <use xlink:href="#fa-clock-o"></use>
-                    </svg>
-                    Slide Counter
-                  </h2>
-                  Current/Total number
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <span>40<sup>+</sup></span>
-                    Beautiful Components
-                  </h2>
-                  Covers, cards, quotes...
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <svg class="fa-text-height">
-                      <use xlink:href="#fa-text-height"></use>
-                    </svg>
-                    Vertical Rhythm
-                  </h2>
-                  Use multiples of 8.
-                </div>
-              </li>
-              <li>
-                <div>
-                  <h2>
-                    <span>500<sup>+</sup></span>
-                    SVG Icons
-                  </h2>
-                  Font Awesome Kit.
-                </div>
-              </li>
-            </ul>
+            <h2>分享背景</h2>
+            <p>
+              在之前的工作中通过iframe嵌入和nginx代理的方式实现的微前端我都有接触,
+              在这个过程中，不管是iframe的方式或者是nginx的方式在开发和部署的时候都相对来说比较麻烦，于是乎就萌生了一个想法-
+              对现有的这种微前端的方式做一个改造，在经过一系列的调研之后选中了阿里qiankun，后期因为个人原因没有实现这种架构的
+              改造，所以今天就借着这个机会和大家一起来探讨一下乾坤这个框架
+            </p>
           </div>
         </section>
         <section class="bg-apple">
-          <div class="wrap">
-            <div class="content-left">
-              <h2>WebSlides was made to inspire people.</h2>
-            </div>
-            <!-- end .content-left -->
-            <div class="content-left">
-              <p>WebSlides is a wonderful way to showcase your company. All content is for demo purposes only. Images are property of their respective owners.</p>
-            </div>
-            <!-- end .content-left -->
-            <ul class="flexblock">
-              <li>
-                <div>
-                  <img class="whitelogo" src="static/images/logos/google.svg" alt="Google">
-                </div>
-              </li>
-              <li>
-                <div>
-                  <img class="whitelogo" src="static/images/logos/netflix.svg" alt="Netflix">
-                </div>
-              </li>
-              <li>
-                <div>
-                  <img class="whitelogo" src="static/images/logos/microsoft.svg" alt="Microsoft">
-                </div>
-              </li>
+          <div class="wrap size-50">
+            <h2>微前端不同实现方式</h2>
+            <p style="margin-left: 0;
+            text-indent: 0;
+            margin-bottom: 20px;">目前最常用的实现微前端的三种方式，
+            下面我将介绍这几种模式如何开发部署，以及三者之间的差异：</p>
+            <ul>
+              <li><a>iframe</a></li>
+              <li><a>nginx代理</a></li>
+              <li><a>qiankun</a></li>
             </ul>
           </div>
           <!-- .end .wrap -->
         </section>
         <section class="bg-apple">
           <div class="wrap">
-            <div class="content-left">
-              <h2>WebSlides help you build a culture of excellence.</h2>
-            </div>
-            <!-- end .content-left -->
-            <div class="content-left">
-              <p>The art of storytelling. Hypertext, clean code, and beauty as narrative elements. Just essential features and lovely CSS. All content is for demo purposes only. </p>
-            </div>
-            <!-- end .content-left -->
-            <ul class="flexblock metrics">
-              <li> Founded
-                <span>1976</span>
-              </li>
-              <li>
-                <span>
-                  <svg class="fa-users">
-                    <use xlink:href="#fa-users"></use>
-                  </svg>
-                </span>
-                524M Subscribers
-              </li>
-              <li>
-                <span>
-                  <svg class="fa-line-chart">
-                    <use xlink:href="#fa-line-chart"></use>
-                  </svg>
-                </span>
-                Revenue: $16M
-              </li>
-              <li>
-                Monthly Growth
-                <span>64%</span>
-              </li>
-            </ul>
+            <div class="grid vertical-align">
+              <div class="column" style="justify-content: unset">
+                <h2>iframe</h2>
+                <p style="width: 100%; margin-bottom: 30px">iframe 虽不是为微前端而生，但是是集成的最简单方式之一。本质上来说，iframe 里的页面是完全独立的，
+                  而且 iframe 还提供了很多的隔离机制，我们只需将单体的前端应用，按照业务模块进行拆分，分别部署，最后通过 iframe 进行动态加载即可</p>
+                
+                  <ul>
+                    <li>优点：实现简单，运行稳定，天然具备隔离性。</li>
+                    <li>缺点：主页面和 iframe 共享最大允许的 HTTP 链接数，iframe 阻塞主页面加载，浏览器的后退按钮无效，
+                      性能低、通信复杂、双滚动条、弹窗无法全局覆盖，它的扩展性不高，只适合简单的页面渲染。
+                    </li>
+                  </ul>
+              </div>
+              <div class="column">
+                <pre>
+                  <xmp>
+                    <el-tab-pane 
+                      v-for="item in tabList" 
+                      :label="item.label" 
+                      :name="item.name"
+                    >
+                      <iframe 
+                        v-show="activeTab === item.name" 
+                        :src="item.src"
+                      >
+                    </iframe>
+                    </el-tab-pane>
+                      
+                      tabList: [
+                        {
+                          name: 'sub-vue',
+                          label: 'sub-vue',
+                          src: 'http://localhost:8080'
+                        },
+                        {
+                          name: 'sub-react',
+                          label: 'sub-react',
+                          src: 'http://localhost:8081'
+                        },
+                      ]
+                  </xmp>
+                </pre>
+              </div>
+            </div>       
           </div>
           <!-- .end .wrap -->
         </section>
         <section class="bg-apple">
           <!--.wrap o <nav> = container 1200px -->
           <div class="wrap">
-            <ul class="flexblock metrics border">
-              <li> Founded
-                <span>1976</span>
-              </li>
-              <li>
-                <span>
-                  <svg class="fa-users">
-                    <use xlink:href="#fa-users"></use>
-                  </svg>
-                </span>
-                524M Subscribers
-              </li>
-              <li>
-                <span>
-                  <svg class="fa-line-chart">
-                    <use xlink:href="#fa-line-chart"></use>
-                  </svg>
-                </span>
-                Revenue: $16M
-              </li>
-              <li>
-                Monthly Growth
-                <span>64%</span>
-              </li>
-              <li>
-                <span>
-                  <svg class="fa-building-o">
-                    <use xlink:href="#fa-building-o"></use>
-                  </svg>
-                </span>
-                6 Offices
-              </li>
-              <li>
-                <span>
-                  <svg class="fa-smile-o">
-                    <use xlink:href="#fa-smile-o"></use>
-                  </svg>
-                </span>
-                14K Employees
-              </li>
-              <li>
-                <span>
-                $4M
-                </span>
-                EBITDA
-              </li>
-              <li>
-                <span>
-                  <svg class="fa-university">
-                    <use xlink:href="#fa-university"></use>
-                  </svg>
-                </span>
-                Bank: $76B
-              </li>
-            </ul>
+            <div class="grid vertical-align">
+              <div class="column">
+                <h2>目录结构</h2>
+                <img width="40%" src="./static/images/micro-dir.png" alt="">
+              </div>
+            </div>
           </div>
           <!-- .end .wrap -->
         </section>
@@ -829,11 +720,11 @@
           <div class="wrap size-50">
             <h2>参考文献</h2>
             <ul>
-              <li><a href="https://microfrontends.com" target="_blank">https://microfrontends.com</a></li>
-              <li><a href="https://juejin.cn/post/6875462470593904653#heading-18" target="_blank">https://juejin.cn/post/6875462470593904653#heading-18</a></li>
-              <li><a href="https://blog.csdn.net/qq_42783654/article/details/116042226" target="_blank">https://blog.csdn.net/qq_42783654/article/details/116042226</a></li>
-              <li><a href="https://xw.qq.com/cmsid/20211213A09A5J00" target="_blank">https://xw.qq.com/cmsid/20211213A09A5J00</a></li>
-              <li><a href="" target="_blank"></a></li>
+              <li><a href="https://microfrontends.com" target="_blank">microfrontends</a></li>
+              <li><a href="https://juejin.cn/post/6875462470593904653#heading-18" target="_blank">微前端qiankun从搭建到部署的实践</a></li>
+              <li><a href="https://blog.csdn.net/qq_42783654/article/details/116042226" target="_blank">微前端是什么？为什么要用微前端？</a></li>
+              <li><a href="https://xw.qq.com/cmsid/20211213A09A5J00" target="_blank">基于 iframe 的全新微前端方案</a></li>
+              <li><a href="https://segmentfault.com/a/1190000041710666?utm_source=sf-similar-article" target="_blank">浅谈微前端</a></li>
               <li><a href="" target="_blank"></a></li>
               <li><a href="" target="_blank"></a></li>
               <li><a href="" target="_blank"></a></li>

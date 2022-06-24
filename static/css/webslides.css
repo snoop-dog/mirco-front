@@ -137,7 +137,7 @@ audio,
 video {
   border: 0;
   font: inherit;
-  font-size: 100%;
+  font-size: 1.05em;
   margin: 0;
   padding: 0;
   vertical-align: baseline; }
@@ -206,6 +206,16 @@ audio:not([controls]) {
 [hidden],
 template {
   display: none; }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none; /* IE 10+ */
+  scrollbar-width: none; /* Firefox */
+  overflow-y: scroll;
+}
 
 ul {
   list-style: square;
@@ -837,6 +847,7 @@ ol > li {
 ul > li > a,
 ol > li > a {
   color: #abd !important;
+  cursor: pointer;
 }
 
 li li {
@@ -858,7 +869,6 @@ ul.description {
 
 ul.description li,
 .column ul li {
-  list-style: none;
   margin-left: 0; }
 
 .column ol > li {
