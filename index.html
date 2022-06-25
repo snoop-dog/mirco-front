@@ -116,7 +116,7 @@
               </li>
               <li><a href="#slide=40">qiankun原理</a></li>
               <li><a href="#slide=40">参考文献</a></li>
-              <li><a href="#slide=40">demo地址</a></li>
+              <li><a href="#slide=38">demo地址</a></li>
               <li><a href="#slide=40">谢谢观看</a></li>
             </ul>
           </div>
@@ -132,6 +132,21 @@
              </p>
           </div>
           <!-- .end .wrap -->
+        </section>
+        <section class="bg-apple">
+            <div class="wrap">
+              <h2>微前端架构具备以下几个核心价值</h2>
+              <ul style="width: 70%">
+                <li>技术栈无关
+                  主框架不限制接入应用的技术栈，微应用具备完全自主权</li>
+                <li>独立开发、独立部署
+                  微应用仓库独立，前后端可独立开发，部署完成后主框架自动完成同步更新</li>
+                <li>增量升级
+                  在面对各种复杂场景时，我们通常很难对一个已经存在的系统做全量的技术栈升级或重构，而微前端是一种非常好的实施渐进式重构的手段和策略</li>
+                <li>独立运行时
+                  每个微应用之间状态隔离，运行时状态不共享</li>
+              </ul>
+            </div>
         </section>
         <section class="bg-apple aligncenter">
           <div class="wrap">
@@ -227,19 +242,95 @@
           </div>
           <!-- .end .wrap -->
         </section>
-        <section class="bg-apple aligncenter">
-          <span class="background dark" style="background-image:url('https://source.unsplash.com/pb_lF8VWaPU/')"></span>
+        <section class="bg-apple">
           <div class="wrap">
-            <h2 class="text-data">3,456,789</h2>
-            <h3>iPhone 7 in first 24 hours</h3>
+            <h2>主要问题</h2>
+            <ul>
+              <li>子应用之间，子应用与主应用之间的通信问题</li>
+              <li>主应用和子应用之间cookie共享</li>
+              <li>iframe状态保存与卡顿问题</li>
+            </ul>
           </div>
           <!-- .end .wrap -->
         </section>
-        <section class="bg-apple aligncenter">
+        <section class="bg-apple">
           <!--.wrap = container (width: 90%) -->
           <div class="wrap">
-            <h2 class="text-data">$48 Billion</h2>
-            <h3>Revenue in Q4 2024</h3>
+            <h2>qiankun</h2>
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3>qiankun核心设计理念</h3>
+                <ul>
+                  <li>
+                    <ul style="width: 90%;">
+                      <li>
+                        <b>简单</b>
+                        <span>由于主应用微应用都能做到技术栈无关，qiankun 对于用户而言只是一个类似 jQuery 的库，
+                          你需要调用几个 qiankun 的 API 即可完成应用的微前端改造。同时由于 qiankun 的 HTML entry 及沙箱的设计，
+                          使得微应用的接入像使用 iframe 一样简单</span>
+                      </li>
+                      <li>
+                        <b>解耦/技术栈无关</b>
+                        <span>
+                          微前端的核心目标是将巨石应用拆解成若干可以自治的松耦合微应用，而 qiankun 的诸多设计均是秉持这一原则，
+                          如 HTML entry、沙箱、应用间通信等。这样才能确保微应用真正具备 独立开发、独立运行 的能力
+                        </span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="column">
+                <h3>特性</h3>
+                <ul>
+                  <li>
+                    <ul style="width: 90%;">
+                      <li>
+                        <b> 基于 single-spa 封装</b>
+                        <span>提供了更加开箱即用的 API</span>
+                      </li>
+                      <li>
+                        <b>技术栈无关</b>
+                        <span>
+                          任意技术栈的应用均可 使用/接入，不论是 React/Vue/Angular/JQuery 还是其他等框架
+                        </span>
+                      </li>
+                      <li>
+                        <b>HTML Entry 接入方式</b>
+                        <span>
+                          让你接入微应用像使用 iframe 一样简单
+                        </span>
+                      </li>
+                      <li>
+                        <b>样式隔离</b>
+                        <span>
+                          确保微应用之间样式互相不干扰
+                        </span>
+                      </li>
+                      <li>
+                        <b>JS 沙箱</b>
+                        <span>
+                          确保微应用之间 全局变量/事件 不冲突
+                        </span>
+                      </li>
+                      <li>
+                        <b>资源预加载</b>
+                        <span>
+                          在浏览器空闲时间预加载未打开的微应用资源，加速微应用打开速度
+                        </span>
+                      </li>
+                      <li>
+                        <b>umi 插件</b>
+                        <span>
+                          提供了 <a href="https://github.com/umijs/plugins/tree/master/packages/plugin-qiankun" target="_blank">@umijs/plugin-qiankun</a> 供 umi 应用一键切换成微前端架构系统
+                        </span>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <!-- .end .wrap -->
         </section>
@@ -704,20 +795,11 @@
         </section>
         <section class="bg-apple aligncenter">
           <div class="wrap">
-            <div class="cta">
-              <div class="number">
-                <p><span>Ag</span></p>
-              </div>
-              <!--end .number -->
-              <div class="benefit">
-                <p class="text-subtitle">San Francisco</p>
-                <h3><strong>The quick brown fox jumps over the lazy dog</strong>.</h3>
-                <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-                <p>abcdefghijklmnopqrstuvwxyz</p>
-                <p>1234567890(,.;:?!$&*)</p>
-              </div>
-              <!--end .benefit -->
-            </div>
+            <h2>demo地址</h2>
+            <h5>代码地址：<a href="https://github.com/snoop-dog/micro-front-example" target="_blank">
+              micro-front-example</a></h5>
+            <h5>演示地址：<a href="https://github.com/snoop-dog/micro-front-example" target="_blank">
+                micro-front-example</a></h5>
             <!--end .cta -->
           </div>
           <!-- .end .wrap -->
@@ -733,8 +815,8 @@
               <li><a href="https://xw.qq.com/cmsid/20211213A09A5J00" target="_blank">基于 iframe 的全新微前端方案</a></li>
               <li><a href="https://segmentfault.com/a/1190000041710666?utm_source=sf-similar-article" target="_blank">浅谈微前端</a></li>
               <li><a href="https://qiankun.umijs.org/zh/" target="_blank">qiankun官网</a></li>
-              <li><a href="" target="_blank"></a></li>
-              <li><a href="" target="_blank"></a></li>
+              <li><a href="https://zhuanlan.zhihu.com/p/78362028" target="_blank">可能是你见过最完善的微前端解决方案</a></li>
+              <li><a href="https://zhuanlan.zhihu.com/p/95085796" target="_blank">微前端的核心价值</a></li>
             </ul>
           </div>
           <!-- .end .wrap -->
